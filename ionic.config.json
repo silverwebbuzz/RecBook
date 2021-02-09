@@ -1,0 +1,7 @@
+{
+  "name": "RecBook",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

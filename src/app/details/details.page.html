@@ -1,0 +1,208 @@
+<ion-header mode="md">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon size="large" name="arrow-back" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title mode="md" color="light">
+      Receipt Details
+    </ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="shareActionSheet()">
+          <ion-icon size="large" name="share-social" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <div class="blue-background"></div> -->
+
+  <div class="div_rec">
+
+    <ion-label class="lbl_bsns_name">New Freezeland</ion-label>
+
+    <div class="div_hr"></div>
+
+    <ion-label class="lbl_bsns_add">Showroom no. 6, Shapath Hexa, Opp. Kargil Petrol pump, Sola road, S.G Highway, Ahmedabad, Gujarat, 380060</ion-label>
+
+    <div class="div_hr"></div>
+
+    <ion-row class="row_details">
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">GSTIN :</ion-label>
+      </ion-col>
+      <ion-col size="9" class="col_details">
+        <ion-label class="lbl_details">24AAAFQ7220L1ZB</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row_details">
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Tel :</ion-label>
+      </ion-col>
+      <ion-col size="9" class="col_details">
+        <ion-label class="lbl_details">7574809616</ion-label>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="row_details">
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Invoice :</ion-label>
+      </ion-col>
+      <ion-col size="9" class="col_details">
+        <ion-label class="lbl_details">11510335467</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row_details">
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Bill no. :</ion-label>
+      </ion-col>
+      <ion-col size="9" class="col_details">
+        <ion-label class="lbl_details">26668</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <div class="div_hr"></div>
+    
+    <ion-row class="row_details">
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Date :</ion-label>
+      </ion-col>
+      <ion-col size="9" class="col_details">
+        <ion-label class="lbl_details">
+          03/03/2020
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row_details">
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Name :</ion-label>
+      </ion-col>
+      <ion-col size="9" class="col_details">
+        <ion-label class="lbl_details">Chandrakant</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row_details">
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Mobile :</ion-label>
+      </ion-col>
+      <ion-col size="9" class="col_details">
+        <ion-label class="lbl_details">9033366926</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <div class="div_hr"></div>
+    
+    <ion-row class="row_details">
+      <ion-col size="4" class="col_details">
+        <ion-label class="lbl_details">Item</ion-label>
+      </ion-col>
+      <ion-col size="2" class="col_details">
+        <ion-label class="lbl_details">Qty</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Rate</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">Amount</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <div class="div_hr"></div>
+
+    <ion-row class="row_details">
+      <ion-col size="4" class="col_details">
+        <ion-label class="lbl_details">Clb Nfl Special</ion-label>
+      </ion-col>
+      <ion-col size="2" class="col_details">
+        <ion-label class="lbl_details">1</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">129.0</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">129.0</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row_details">
+      <ion-col size="4" class="col_details">
+        <ion-label class="lbl_details">Clb Tandoori Paneer</ion-label>
+      </ion-col>
+      <ion-col size="2" class="col_details">
+        <ion-label class="lbl_details">2</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">139.0</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">278.0</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <div class="div_hr"></div>
+
+    <ion-row class="row_details alignR">
+      <ion-col size="5" class="col_details">
+        <ion-label class="lbl_details">Total Qty: 3</ion-label>
+      </ion-col>
+      <ion-col size="4" class="col_details">
+        <ion-label class="lbl_details">Sub Total</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">278.0</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row_details alignR">
+      <ion-col size="5" class="col_details">
+        <ion-label class="lbl_details">CGST 2.5</ion-label>
+      </ion-col>
+      <ion-col size="4" class="col_details">
+        <ion-label class="lbl_details">2.5%</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">6.95</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="row_details alignR">
+      <ion-col size="5" class="col_details">
+        <ion-label class="lbl_details">SGST 2.5</ion-label>
+      </ion-col>
+      <ion-col size="4" class="col_details">
+        <ion-label class="lbl_details">2.5%</ion-label>
+      </ion-col>
+      <ion-col size="3" class="col_details">
+        <ion-label class="lbl_details">6.95</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <div class="div_hr"></div>
+
+    <ion-row class="row_details alignR">
+      <ion-col size="8" class="col_details">
+        <ion-label class="lbl_details">Grand Total</ion-label>
+      </ion-col>
+      <ion-col size="4" class="col_details">
+        <ion-label class="lbl_details">291.9</ion-label>
+      </ion-col>
+    </ion-row>
+
+    <div class="div_hr"></div>
+
+    <ion-row class="row_details alignC">
+      <ion-col size="12" class="col_details">
+        <ion-label class="lbl_details">!! Thank You Visit Again !!</ion-label>
+      </ion-col>
+    </ion-row>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,183 @@
+<ion-header mode="md">
+  <ion-toolbar color="primary">
+    <ng-container *ngIf="!isserachOpen">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon size="large" name="arrow-back" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title mode="md" color="light">
+      Receipts
+    </ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="OpenSearch()">
+          <ion-icon size="large" name="search" color="light"></ion-icon>
+        </ion-button>
+        <ion-button (click)="shareActionSheet()">
+          <ion-icon size="large" name="share-social" color="light"></ion-icon>
+        </ion-button>
+        <ion-button (click)="filterActionSheet()">
+          <ion-icon size="large" name="filter" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ng-container>
+    <ng-container *ngIf="isserachOpen">
+      <ion-searchbar mode="md" placeholder="Search..." showCancelButton="always" animated="true" (ionCancel)="OpenSearch()"></ion-searchbar>
+    </ng-container>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="blue-background">
+
+    <div class="div-logo" (click)="addReceipt()">
+      <div class="img_logo">
+        <ion-icon name="add" color="light"></ion-icon>
+        <ion-label class="lbl_dash">Add Receipt</ion-label>
+      </div>
+    </div>
+
+  </div>
+
+  <ion-row class="row_rec top_list">
+    <ion-col size="2" class="col_rec spc" (click)="preview()">
+      <img src="../../assets/images/placeholders.png" class="img_rec"/>
+    </ion-col>
+    <ion-col size="6" class="col_rec" (click)="details()">
+      <ion-label class="lbl_rec">Merchant</ion-label>
+      <ion-label class="lbl_rec_name">TGB CAFE N Bakery</ion-label>
+    </ion-col>
+    <ion-col size="4" class="col_rec" (click)="details()">
+      <ion-label class="lbl_rec">Date</ion-label>
+      <ion-label class="lbl_rec_name">24-Jan-2020</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="row_rec">
+    <ion-col size="2" class="col_rec spc">
+      <img src="../../assets/images/placeholders.png" class="img_rec"/>
+    </ion-col>
+    <ion-col size="6" class="col_rec">
+      <ion-label class="lbl_rec">Merchant</ion-label>
+      <ion-label class="lbl_rec_name">TGB CAFE N Bakery</ion-label>
+    </ion-col>
+    <ion-col size="4" class="col_rec">
+      <ion-label class="lbl_rec">Date</ion-label>
+      <ion-label class="lbl_rec_name">24-Jan-2020</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="row_rec">
+    <ion-col size="2" class="col_rec spc">
+      <img src="../../assets/images/placeholders.png" class="img_rec"/>
+    </ion-col>
+    <ion-col size="6" class="col_rec">
+      <ion-label class="lbl_rec">Merchant</ion-label>
+      <ion-label class="lbl_rec_name">TGB CAFE N Bakery</ion-label>
+    </ion-col>
+    <ion-col size="4" class="col_rec">
+      <ion-label class="lbl_rec">Date</ion-label>
+      <ion-label class="lbl_rec_name">24-Jan-2020</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="row_rec">
+    <ion-col size="2" class="col_rec spc">
+      <img src="../../assets/images/placeholders.png" class="img_rec"/>
+    </ion-col>
+    <ion-col size="6" class="col_rec">
+      <ion-label class="lbl_rec">Merchant</ion-label>
+      <ion-label class="lbl_rec_name">TGB CAFE N Bakery</ion-label>
+    </ion-col>
+    <ion-col size="4" class="col_rec">
+      <ion-label class="lbl_rec">Date</ion-label>
+      <ion-label class="lbl_rec_name">24-Jan-2020</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <!-- <ion-item lines="none" class="top-spc" (click)="addReceipt()">
+    <ion-icon name="add" slot="start" color="primary"></ion-icon>
+    <ion-label>Add Receipt</ion-label>
+    <ion-icon name="arrow-forward" slot="end" color="primary"></ion-icon>
+  </ion-item> -->
+
+  <!-- <ion-item lines="none" class="top_list" (click)="details()">
+    <ion-icon name="document-text" slot="start" color="primary"></ion-icon>
+    <ion-label>Recipient name</ion-label>
+    <ion-icon name="arrow-forward" slot="end" color="primary"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon name="document-text" slot="start" color="primary"></ion-icon>
+    <ion-label>Recipient name</ion-label>
+    <ion-icon name="arrow-forward" slot="end" color="primary"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon name="document-text" slot="start" color="primary"></ion-icon>
+    <ion-label>Recipient name</ion-label>
+    <ion-icon name="arrow-forward" slot="end" color="primary"></ion-icon>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-icon name="document-text" slot="start" color="primary"></ion-icon>
+    <ion-label>Recipient name</ion-label>
+    <ion-icon name="arrow-forward" slot="end" color="primary"></ion-icon>
+  </ion-item> -->
+
+  <!-- <ion-row class="row-card side-spc top-spc">
+    <ion-col size="4" class="col-card">
+      <ion-card class="card-dash" (click)="addReceipt()">
+        <div class="div-icon">
+          <ion-icon name="add" class="dash-icon"></ion-icon>
+        </div>
+        <ion-label class="lbl-name">Add</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4" class="col-card">
+      <ion-card class="card-dash" (click)="details()">
+          <div class="div-icon">
+              <ion-icon name="document-text" class="dash-icon"></ion-icon>
+            </div>
+        <ion-label class="lbl-name">Name</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4" class="col-card">
+      <ion-card class="card-dash box2">
+          <div class="div-icon">
+              <ion-icon name="document-text" class="dash-icon"></ion-icon>
+            </div>
+        <ion-label class="lbl-name">Name</ion-label>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="row-card side-spc bottom-spc">
+    <ion-col size="4" class="col-card">
+      <ion-card class="card-dash">
+        <div class="div-icon">
+          <ion-icon name="document-text" class="dash-icon"></ion-icon>
+        </div>
+        <ion-label class="lbl-name">Name</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4" class="col-card">
+      <ion-card class="card-dash" (click)="details()">
+          <div class="div-icon">
+              <ion-icon name="document-text" class="dash-icon"></ion-icon>
+            </div>
+        <ion-label class="lbl-name">Name</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4" class="col-card">
+      <ion-card class="card-dash box2">
+          <div class="div-icon">
+              <ion-icon name="document-text" class="dash-icon"></ion-icon>
+            </div>
+        <ion-label class="lbl-name">Name</ion-label>
+      </ion-card>
+    </ion-col>
+  </ion-row> -->
+
+</ion-content>

@@ -1,0 +1,72 @@
+<ion-header mode="md">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon size="large" name="arrow-back" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title mode="md" color="light">
+      Receipt Scan
+    </ion-title>
+      <!-- <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon size="large" name="checkmark-sharp" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="blue-background">
+    <!-- <img src="../../assets/images/placeholders.png" class="img_preview"> -->
+
+    <div class="div-logo" (click)="scan()">
+      <div class="img_logo">
+        <ion-icon name="camera" color="light"></ion-icon>
+        <ion-label class="lbl_dash">Scan</ion-label>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <p>Success : {{ocrresult}}</p>
+
+  <p>Error : {{ocrerror}}</p> -->
+
+</ion-content>
+
+<ion-footer>
+  <ion-button class="btn_footer" size="large" expand="full" (click)="add()">Add Receipt</ion-button>
+  <!-- <ion-row>
+    <ion-col size="6">
+      <ion-button class="btn" size="large" expand="full" (click)="presentActionSheet()">Scan</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button class="btn" size="large" expand="full" (click)="analyze()">Read</ion-button>
+    </ion-col>
+  </ion-row> -->
+
+  
+
+</ion-footer>
+
+<!-- <ion-content padding>
+
+<button class="select-image" ion-button block *ngIf="!srcImage" (click)="presentActionSheet()" color="light">
+  <ion-icon name="camera"></ion-icon>
+</button>
+
+<div *ngIf="srcImage" class="image-wrapper">
+  <img id="image" [src]="srcImage" />
+  <button ion-button icon-left block (click)="analyze()" color="light">
+    <ion-icon name="search"></ion-icon>
+    Read
+  </button>
+  <button ion-button icon-left block (click)="restart()" color="light">
+    <ion-icon name="refresh"></ion-icon>
+    Restart
+  </button>
+</div>
+
+</ion-content> -->

@@ -1,0 +1,87 @@
+<ion-header mode="md">
+  <ion-toolbar color="primary">
+    <!-- <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="menu" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+    <ion-title mode="md" color="light">
+      Dashboard
+    </ion-title>
+      <!-- <ion-buttons slot="end">
+        <ion-button routerLink="/ocr">
+          <ion-icon name="camera" color="light"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="share-social" color="light"></ion-icon>
+        </ion-button>
+        <ion-button>
+          <ion-icon name="filter" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="blue-background">
+
+    <div class="div-logo" (click)="ocr()">
+      <div class="img_logo">
+        <ion-icon name="camera" color="light"></ion-icon>
+        <ion-label class="lbl_dash">Receipt Scan</ion-label>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <ion-row class="row-card side-spc top-spc">
+    <ion-col size="6" class="col-card">
+      <ion-card class="card-dash" (click)="ocr()">
+        <div class="div-icon">
+          <ion-icon name="camera" class="dash-icon"></ion-icon>
+        </div>
+        <ion-label class="lbl-name">Receipt Scan</ion-label>
+      </ion-card>
+    </ion-col> -->
+    <ion-row class="row-card side-spc top-spc">
+    <ion-col size="6" class="col-card">
+      <ion-card class="card-dash box2" (click)="emailScan()">
+          <div class="div-icon">
+              <ion-icon name="mail" class="dash-icon"></ion-icon>
+            </div>
+        <ion-label class="lbl-name">Email Scan</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6" class="col-card">
+      <ion-card class="card-dash" (click)="receipts()">
+        <div class="div-icon">
+          <ion-icon name="receipt" class="dash-icon"></ion-icon>
+        </div>
+        <ion-label class="lbl-name">All Receipts</ion-label>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="row-card side-spc">
+    <ion-col size="6" class="col-card">
+      <ion-card class="card-dash" (click)="profile()">
+          <div class="div-icon">
+              <ion-icon name="person" class="dash-icon"></ion-icon>
+            </div>
+        <ion-label class="lbl-name">My Profile</ion-label>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6" class="col-card">
+      <ion-card class="card-dash" (click)="logout()">
+          <div class="div-icon">
+              <ion-icon name="lock-closed" class="dash-icon"></ion-icon>
+            </div>
+        <ion-label class="lbl-name" (click)="logout()">Logout</ion-label>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <!-- <img src="../../assets/images/rcpt2.JPEG" class="chkimg"/> -->
+
+</ion-content>

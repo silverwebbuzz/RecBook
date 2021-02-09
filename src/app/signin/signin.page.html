@@ -1,0 +1,90 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>SignIn</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="page_signin">
+
+  <div class="blue-background">
+
+    <ion-label class="lbl_header">SignIn</ion-label>
+
+    <div class="div-logo">
+      <ion-img src="../../assets/icon/icon.png" class="img_logo" ></ion-img>
+    </div>
+
+  </div>
+
+  <div class="div-card">
+
+    <ion-card>
+
+      <form [formGroup]="login_form" autocomplete="off">
+
+        <ion-item lines="none" class="input-item add space">
+          <ion-icon name="mail"></ion-icon>
+          <!-- <ion-label position="stacked" class="input-lbl">Email / Mobile</ion-label> -->
+          <ion-input type="email" formControlName="email" placeholder="Email or phone number" class="input-box">
+          </ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="login_form.controls.email.hasError('required') && login_form.controls.email.touched">
+          <p class="content add-error">Please Enter Email / Phone!</p>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="login_form.controls.email.hasError('incorrect') && login_form.controls.email.touched">
+          <p class="content add-error">Email Address Does Not Exists.</p>
+        </ion-item>
+
+        <ion-item lines="none" class="input-item add">
+          <ion-icon name="lock-closed"></ion-icon>
+          <!-- <ion-label position="stacked" class="input-lbl">Password</ion-label>  -->
+          <ion-input type="password" formControlName="password" placeholder="Password" class="input-box"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="login_form.controls.password.hasError('required') && login_form.controls.password.touched">
+          <p class="content add-error">Please Enter Password!</p>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="login_form.controls.password.hasError('incorrect') && login_form.controls.password.touched">
+          <p class="content add-error">Invalid password.</p>
+        </ion-item>
+
+      </form>
+
+    </ion-card>
+
+    <ion-label class="lbl-forgot" (click)="forgot()">Forgot Password ?</ion-label>
+
+    <ion-button expand="full" size="large" shape="round" (click)="login()">SIGN IN</ion-button>
+
+    <ion-label class="lbl_OR">OR Connect With</ion-label>
+
+    <!-- <ion-row>
+    <ion-img src="../../assets/images/fb.png" class="img_icon fb_img"></ion-img>
+    <ion-img src="../../assets/images/google.png" class="img_icon"></ion-img> -->
+    <!-- <ion-col size="5">
+      
+    </ion-col>
+    <ion-col size="2"></ion-col>
+    <ion-col size="5">
+      
+    </ion-col> -->
+    <!-- </ion-row> -->
+
+    <ion-row>
+      <ion-img src="../../assets/images/google.png" (click)="signInWithGoogle()" class="img_icon"></ion-img>
+      <!-- <ion-label>Google</ion-label> -->
+    </ion-row>
+
+    <ion-label class="lbl-new" (click)="signup()">New User ?</ion-label>
+  </div>
+
+  <!-- <ion-button routerLink='/ocr'>OCR</ion-button> -->
+
+</ion-content>

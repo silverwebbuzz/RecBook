@@ -1,0 +1,129 @@
+ion-content{
+    --padding-bottom: 20px
+}
+
+.blue-background{
+    //position: absolute;
+    width: 100%;
+    height: 100px;
+    //transform: rotate(68deg);
+    //border: solid 1px #f1f1f1;
+    background: var(--ion-color-primary);
+    z-index: 0;
+    bottom: 75%;
+    //left: 17%;
+    text-align: center;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    //box-shadow: 0px 4px 10px #b1afaf;
+
+    .img_logo{
+        border-radius: 50px;
+        border: 5px solid #fff;
+        box-shadow: 0px 0px 6px #ccc;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        //box-shadow: 0px 4px 10px #ccc;
+    }
+}
+
+.div-logo{
+    position: relative;
+    //background: var(--ion-color-secondary-contrast);
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding-top: 45px;
+    //padding: 5px;
+}
+
+.lbl_user{
+    display: block;
+    text-align: center;
+    margin-top: 45px;   
+    font-size: 18px;
+}
+
+.input-item{
+    //--background: transparent;
+    --inner-padding-end: 0px;
+    --padding-start: 4px;
+    padding: 0px 8px 0px 8px;
+    box-shadow: 0px 1px 6px #ccc;
+    margin: 16px 16px 0px 16px;
+    border-radius: 5px;
+    //margin-top: 14px;
+
+    ion-icon{
+        color: var(--ion-color-medium);
+        font-size: 24px;
+    }
+
+    .input-box{
+        //border-bottom: 1px solid #ccc;
+        margin-left: 8px;
+        //--placeholder-color: #fff;
+        //--color: #fff;
+    }
+
+    ion-textarea{
+        //border-bottom: 1px solid #ccc;
+        margin-left: 8px;
+        //--placeholder-color: #fff;
+        //--color: #fff;
+    }
+}
+
+.item-dropdown{
+    --padding-start: 4px; 
+    --inner-padding-end: 0px;
+    --background-activated: transparent;
+    --background-focused: transparent;
+    padding: 0px 8px 0px 8px;
+    box-shadow: 0px 1px 6px #ccc;
+    margin: 16px 16px 0px 16px;
+    border-radius: 5px;
+ 
+    .btn-select{
+        --padding-end: 0px;
+        --padding-start: 0px;
+        min-width: 87%;
+    }
+}
+
+
+// .top{
+//     margin-top: 48px;
+// }
+
+.btn-choose{
+    position: absolute;
+    top: 30%;
+    opacity: 0;
+}
+
+.btn-img{
+    margin-top: 40px;
+}
+
+.btn{
+    color: #666;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+// Field Error
+.validator-error{
+    --background: transparent !important;
+    color: #d44848 !important;
+    --min-height: 18px !important;
+
+    .content{
+        font-size: 12px !important;
+        margin: 0px !important;
+        text-align: center;
+        width: 100%;
+    }
+}

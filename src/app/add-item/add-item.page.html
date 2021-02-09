@@ -1,0 +1,37 @@
+<ion-header mode="md">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon size="large" name="arrow-back" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title mode="md" color="light">
+      Add Item
+    </ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon size="large" name="checkmark-sharp" color="light"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item lines="none" class="input-item add space">
+    <ion-input type="text" placeholder="Item Name" class="input-box"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none" class="input-item add space">
+    <ion-input type="text" placeholder="Qty" class="input-box"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none" class="input-item add space">
+    <ion-input type="text" placeholder="Rate" class="input-box"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none" class="input-item add space">
+    <ion-input type="text" placeholder="Amount" class="input-box"></ion-input>
+  </ion-item>
+
+</ion-content>
